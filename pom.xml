@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.okta.developer</groupId>
+	<artifactId>demo-okta2</artifactId>
+	<version>0.0.8-SNAPSHOT</version>
+	<name>demo-okta2</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+			<!-- other dependencies.... -->
+			<!-- Use MySQL Connector-J -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+			</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- Frontend -->
+			<!--<plugin>-->
+				<!--<artifactId>maven-clean-plugin</artifactId>-->
+				<!--<configuration>-->
+					<!--<failOnError>false</failOnError>-->
+					<!--<filesets>-->
+						<!--<fileset>-->
+							<!--<directory>src/client/dist</directory>-->
+							<!--<followSymlinks>false</followSymlinks>-->
+						<!--</fileset>-->
+						<!--<fileset>-->
+							<!--<directory>src/client/node_modules</directory>-->
+							<!--<followSymlinks>false</followSymlinks>-->
+						<!--</fileset>-->
+					<!--</filesets>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!--<plugin>-->
+				<!--<artifactId>exec-maven-plugin</artifactId>-->
+				<!--<groupId>org.codehaus.mojo</groupId>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>npm install</id>-->
+						<!--<goals>-->
+							<!--<goal>exec</goal>-->
+						<!--</goals>-->
+						<!--<phase>generate-sources</phase>-->
+						<!--<configuration>-->
+							<!--<executable>npm</executable>-->
+							<!--<arguments>-->
+								<!--<argument>install</argument>-->
+							<!--</arguments>-->
+							<!--<workingDirectory>src/client</workingDirectory>-->
+						<!--</configuration>-->
+					<!--</execution>-->
+					<!--<execution>-->
+						<!--<id>angular-cli build</id>-->
+						<!--<goals>-->
+							<!--<goal>exec</goal>-->
+						<!--</goals>-->
+						<!--<phase>generate-resources</phase>-->
+						<!--<configuration>-->
+							<!--<executable>npm</executable>-->
+							<!--<arguments>-->
+								<!--<argument>run</argument>-->
+								<!--<argument>build</argument>-->
+								<!--<argument>&#45;&#45;prod</argument>-->
+							<!--</arguments>-->
+							<!--<workingDirectory>src/client</workingDirectory>-->
+						<!--</configuration>-->
+					<!--</execution>-->
+					<!--<execution>-->
+						<!--<id>angular-cli test</id>-->
+						<!--<goals>-->
+							<!--<goal>exec</goal>-->
+						<!--</goals>-->
+						<!--<phase>test</phase>-->
+						<!--<configuration>-->
+							<!--<executable>npm</executable>-->
+							<!--<arguments>-->
+								<!--<argument>run</argument>-->
+								<!--<argument>test</argument>-->
+							<!--</arguments>-->
+							<!--<workingDirectory>src/client</workingDirectory>-->
+						<!--</configuration>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
+		</plugins>
+
+	</build>
+
+</project>
